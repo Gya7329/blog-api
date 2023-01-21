@@ -5,11 +5,8 @@ module.exports.db_connect = async (URL) => {
     .connect(URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useFindAndModify: false,
     })
     .then(() => {
-      // we need .then because
-      //it returns a promise
       console.log("Database is connected...");
     })
     .catch((error) => {

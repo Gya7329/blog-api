@@ -11,10 +11,10 @@ const createBlog = async (body) => {
 
 const getAllBlogs = async () => {
   try {
-    const blogs = await Blog.find();
+    const blogs = await Blog.find({});
     return blogs;
   } catch (err) {
-    throw err;
+    return err;
   }
 };
 
